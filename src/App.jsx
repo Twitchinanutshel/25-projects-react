@@ -3,6 +3,7 @@ import NavButtons from './components/NavButtons'
 import Home from './components/Home'
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 import Accordion from './components/accordion/Accordion'
+import RandomColorGenerator from './components/randomColorGenerator/RandomColorGenerator'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Route path='/' element={<NavButtons />}>
         <Route index path='/' element={<Home />} />
         <Route path='/accordion' element={<Accordion />}/>
+        <Route path='/random-color-generator' element={<RandomColorGenerator />}/>
       </Route>
     ), { basename: "/25-projects-react/" }
   );
