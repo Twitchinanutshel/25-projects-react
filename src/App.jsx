@@ -4,6 +4,8 @@ import Home from './components/Home'
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 import Accordion from './components/accordion/Accordion'
 import RandomColorGenerator from './components/randomColorGenerator/RandomColorGenerator'
+import StarRating from './components/starRating/StarRating'
+import ImageSlider from './components/imageSlider/ImageSlider'
 
 
 function App() {
@@ -15,6 +17,9 @@ function App() {
         <Route index path='/' element={<Home />} />
         <Route path='/accordion' element={<Accordion />}/>
         <Route path='/random-color-generator' element={<RandomColorGenerator />}/>
+        <Route path='/star-rating' element={<StarRating />}/>
+        <Route path='/image-slider' element={<ImageSlider url={'https://picsum.photos/v2/list'} limit={'10'} />}/>
+
       </Route>
     ), { basename: "/25-projects-react/" }
   );
