@@ -6,6 +6,7 @@ import Accordion from './components/accordion/Accordion'
 import RandomColorGenerator from './components/randomColorGenerator/RandomColorGenerator'
 import StarRating from './components/starRating/StarRating'
 import ImageSlider from './components/imageSlider/ImageSlider'
+import LoadMoreButton from './components/loadMoreButton/LoadMoreButton'
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         <Route path='/random-color-generator' element={<RandomColorGenerator />}/>
         <Route path='/star-rating' element={<StarRating />}/>
         <Route path='/image-slider' element={<ImageSlider url={'https://picsum.photos/v2/list'} limit={'10'} />}/>
-
+        <Route path='/load-more-button' element={<LoadMoreButton />}/>
       </Route>
     ), { basename: "/25-projects-react/" }
   );

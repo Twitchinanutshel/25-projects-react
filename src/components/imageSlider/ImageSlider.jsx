@@ -5,24 +5,21 @@ const ImageSlider = ({ url, limit }) => {
   const [images, setImages] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [errorMsg, setErrorMsg] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   async function fetchImages(getUrl) {
     try {
-      setLoading(true)
-
       const response = await fetch(`${getUrl}?page=1&limit=${limit}`);
       const data = await response.json();
 
       if (data) {
         setImages(data);
-        setLoading(false);
       }
 
     } catch (e) {
       setErrorMsg(e.message)
-      setLoading(false);
     }
+    setLoading(false)
   }
 
   function handlePrevious() {
