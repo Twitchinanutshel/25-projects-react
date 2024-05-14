@@ -24,7 +24,6 @@ const ImageSlider = ({ url, limit }) => {
 
   function handlePrevious() {
     setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
-
   }
   function handleNext() {
     setCurrentSlide(currentSlide === images.length - 1 ? 0 : currentSlide + 1)
